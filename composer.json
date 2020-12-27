@@ -10,15 +10,15 @@
     ],
     "require": {
         "phpactor/name-specification": "^0.1",
-        "phpactor/reference-finder": "^0.1.3",
-        "phpactor/source-code-filesystem": "^0.1",
-        "phpactor/worse-reflection": "^0.4",
-        "php": "^7.3"
+        "phpactor/reference-finder": "dev-maestro-php8",
+        "phpactor/source-code-filesystem": "dev-maestro-php8",
+        "phpactor/worse-reflection": "dev-maestro-php8",
+        "php": "^7.3 || ^8.0"
     },
     "require-dev": {
         "ergebnis/composer-normalize": "^2.0",
         "friendsofphp/php-cs-fixer": "^2.17",
-        "phpactor/test-utils": "^1.0.2",
+        "phpactor/test-utils": "dev-maestro-php8",
         "phpstan/phpstan": "~0.12.0",
         "phpunit/phpunit": "^9.0",
         "phpspec/prophecy-phpunit": "^2.0"
@@ -46,5 +46,11 @@
             "./vendor/bin/phpstan analyse lib -c phpstan.neon",
             "./vendor/bin/phpunit"
         ]
-    }
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:Th3Mouk/glob"
+        }
+    ]
 }
